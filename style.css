@@ -20,12 +20,25 @@ body{
     padding: 50px auto;
 }
 
-.content-block{
+.box{
     width: 350px;
-    height: 150px;
+    height: 190px;
     background-color: chocolate;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    color: #fafafa;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.box:nth-of-type(odd){
+    transform: translateX(-400%);
 }
