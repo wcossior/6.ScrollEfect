@@ -32,7 +32,7 @@ body{
     border-radius: 12px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     transform: translateX(400%);
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .box.show{
@@ -41,4 +41,8 @@ body{
 
 .box:nth-of-type(odd){
     transform: translateX(-400%);
+}
+
+.box.show:nth-of-type(odd){
+    transform: translateX(0);
 }
