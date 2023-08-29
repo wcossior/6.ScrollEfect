@@ -1,12 +1,19 @@
 const boxes = document.querySelectorAll('.box');
 
-document.addEventListener("DOMContentLoaded", ShowBoxes);
+window.addEventListener("scroll", ShowBoxes);
 
 function ShowBoxes() {
-    if (window.scrollY === 0) {
-        boxes.forEach(box => {
+    let windowHeight = window.innerHeight;
+
+    boxes.forEach(box => {
+        let topPositionBox = box.getBoundingClientRect().top;
+        if (topPositionBox < windowHeight * 0.75) {
             box.classList.add('show');
-        });
-    }
+        } else {
+            box.classList.remove('show');
+        }
+
+    });
+
 
 }
