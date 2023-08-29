@@ -2,6 +2,8 @@ const boxes = document.querySelectorAll('.box');
 
 window.addEventListener("scroll", ShowBoxes);
 
+ShowBoxes();
+
 function ShowBoxes() {
     let windowHeight = window.innerHeight;
 
